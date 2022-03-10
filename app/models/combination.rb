@@ -4,7 +4,7 @@ class Combination < ApplicationRecord
   belongs_to :ingredient
 
   belongs_to :dish,
-             :counter_cache => true
+             counter_cache: true
 
   # Indirect associations
 
@@ -15,5 +15,4 @@ class Combination < ApplicationRecord
   def to_s
     ingredient.to_s
   end
-
 end

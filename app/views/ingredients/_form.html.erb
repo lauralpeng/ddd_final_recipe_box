@@ -23,28 +23,5 @@
       <% end %>
     <% end %>
   </div>
-  <div class="form-check">
-    <% have_vs_not_class = "form-check-input" %>
-    <% have_vs_not_was_invalid = ingredient.errors.include?(:have_vs_not) %>
-
-    <% if was_validated %>
-      <% if have_vs_not_was_invalid %>
-        <% have_vs_not_class << " is-invalid" %>
-      <% else %>
-        <% have_vs_not_class << " is-valid" %>
-      <% end %>
-    <% end %>
-
-    <%= f.label :have_vs_not, class: "form-check-label" do %>
-      <%= f.check_box :have_vs_not, class: have_vs_not_class %> Have vs not
-    <% end %>
-    <% if have_vs_not_was_invalid %>
-      <% ingredient.errors.full_messages_for(:have_vs_not).each do |message| %>
-        <div class="invalid-feedback d-flex">
-          <%= message %>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
   <%= f.button class: "btn btn-outline-secondary btn-block" %>
 <% end %>

@@ -47,6 +47,6 @@ class IngredientsController < ApplicationController
   end
 
   def ingredient_params
-    params.require(:ingredient).permit(:ingredient_name, :have_vs_not)
+    params.require(:ingredient).permit(:ingredient_name)
   end
 end
